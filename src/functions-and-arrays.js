@@ -87,10 +87,39 @@ function sumNumbers(num) {
 
 
 // Iteration #3.1 Bonus:
-//Calculating a sum can be as simple as iterating over an array and  
-//adding each of the elements together.
 
-function sum() {}
+// I have no idea why it is not working, this is something very weird.
+
+const mixdArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+
+function sum(array) {
+  if(!array.length){
+    return null;
+  }
+
+  let total = 0;
+
+  array.forEach(element => {
+    if(typeof element === "number"){
+      total += element;
+    }
+    
+    else if(element === true){
+      total++;
+    }
+
+    else{
+      total +=  element.length;
+    }
+  
+  })
+  
+
+  return total;
+}
+
+sum(mixdArr);
 
 
 
