@@ -157,7 +157,27 @@ const wordsUnique = [
   'bring'
 ];
 
-// console.log(wordsUnique.indexOf("poison", 2));
+// remove element, check if -1, if is add back element, if not, keep it removed. 
+
+function uniquifyArray(array) {
+  if(!array.length){
+    return null
+  }
+  
+  let newArray =[];
+
+
+  array.forEach( (element, index) => {
+    if(array.indexOf(element) === index){
+       newArray.push(element);
+    }
+  })
+ 
+  return newArray;
+}
+
+uniquifyArray(wordsUnique);
+
 
 // function uniquifyArray(array) {
 //   solution = [];
@@ -216,7 +236,7 @@ const wordsCount = [
       counter++;
     }
   })
-  
+
   return counter;
 
  }
